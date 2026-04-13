@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Tomorrow Workforce</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html"><span>Tomorrow</span> Workforce</a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" data-visible="false">
+          <a href="solutions.html">Solutions</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      <a class="btn btn-primary nav-cta" href="contact.html">Start a Project Discussion</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-contact">
+      <div class="container contact-panel">
+        <div class="contact-copy">
+          <h2>Start your AI operations discussion</h2>
+          <p>Share your highest-ROI workflow challenge and let us recommend a rapid build path.</p>
+          <p>We typically move from discovery to a production pilot in 4–8 weeks.</p>
+        </div>
+        <form class="contact-form" id="form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@company.com" />
+          </div>
+          <div class="form-field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company name" />
+          </div>
+          <div class="form-field">
+            <label for="useCase">Operations use case</label>
+            <textarea id="useCase" name="useCase" rows="4" placeholder="Describe the workflow or problem"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Start the conversation</button>
+          <p class="success-message" id="contact-success" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
+      <a href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
+    </div>
+  </footer>
+  <script src="site.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
