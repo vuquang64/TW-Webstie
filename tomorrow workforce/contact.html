@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Tomorrow Workforce</title>
+  <title>Contact | The Tomorrow Workforce</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="contact">
   <header class="site-header">
     <div class="container header-inner">
-        <a class="brand" href="index.html"><span>Tomorrow</span> Workforce</a>
+        <a class="brand" href="index.html" aria-label="The Tomorrow Workforce home">
+          <img src="Images/ttw-logo.svg" alt="The Tomorrow Workforce" />
+        </a>
         <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -28,19 +30,18 @@
 
   <main>
     <section class="section section-contact">
-      <div class="container contact-panel">
+      <div class="container contact-panel contact-panel--center contact-panel--form">
         <div class="contact-copy">
-          <h2>Start your AI operations discussion</h2>
-          <p>Share your highest-ROI workflow challenge and let us recommend a rapid build path.</p>
-          <p>We typically move from discovery to a production pilot in 4–8 weeks.</p>
+          <h2>Start a Project Discussion</h2>
+          <p>Tell us about your workflow, the outcome you want, and your timeline. We'll get back to you within 1-2 business days.</p>
         </div>
-        <form class="contact-form" id="form">
+        <form class="contact-form" id="form" data-endpoint="http://localhost:3000/api/contact">
           <div class="form-field">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required placeholder="Your name" />
           </div>
           <div class="form-field">
-            <label for="email">Email</label>
+            <label for="email">Work Email</label>
             <input type="email" id="email" name="email" required placeholder="you@company.com" />
           </div>
           <div class="form-field">
@@ -48,10 +49,30 @@
             <input type="text" id="company" name="company" placeholder="Company name" />
           </div>
           <div class="form-field">
-            <label for="useCase">Operations use case</label>
-            <textarea id="useCase" name="useCase" rows="4" placeholder="Describe the workflow or problem"></textarea>
+            <label for="useCase">What are you looking to build? (Optional)</label>
+            <select id="useCase" name="useCase">
+              <option value="" selected>Select an option</option>
+              <option value="Document automation">Document automation</option>
+              <option value="Internal AI assistant">Internal AI assistant</option>
+              <option value="Decision support tool">Decision support tool</option>
+              <option value="Workflow orchestration">Workflow orchestration</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
           </div>
-          <button class="btn btn-primary" type="submit">Start the conversation</button>
+          <div class="form-field">
+            <label for="budget">Estimated Budget (Optional)</label>
+            <select id="budget" name="budget">
+              <option value="" selected>Select a range</option>
+              <option value="$10k - $50k">$10k - $50k</option>
+              <option value="$50k - $150k">$50k - $150k</option>
+              <option value="$150k+">$150k+</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="workflow">Tell us about your workflow or use case</label>
+            <textarea id="workflow" name="workflow" rows="4" placeholder="Briefly describe the workflow, problem, or system you want to improve."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
           <p class="success-message" id="contact-success" aria-live="polite"></p>
         </form>
       </div>
@@ -60,8 +81,20 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
-      <a href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
+      <div class="footer-brand">
+        <strong>The Tomorrow Workforce</strong>
+        <p>Custom AI Systems. Delivered in Weeks, Not Quarters.</p>
+        <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="how-we-work.html">How We Work</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="footer-email" href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
     </div>
   </footer>
   <script src="site.js" defer></script>

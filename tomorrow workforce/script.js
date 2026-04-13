@@ -48,15 +48,16 @@ function renderCards(containerId, items, renderItem) {
   const container = document.getElementById(containerId);
   if (!container) return;
   container.innerHTML = '';
-  items.forEach(item => container.appendChild(renderItem(item)));
+  items.forEach((item, index) => container.appendChild(renderItem(item, index)));
 }
 
 function renderFeatureCard(feature) {
   return createCard('article', 'feature-card', `<h3>${feature.title}</h3><p>${feature.description}</p>`);
 }
 
-function renderSolutionCard(solution) {
-  return createCard('article', 'solution-item', `<div class="solution-item-image"></div><div class="solution-item-copy"><h3>${solution.title}</h3><p>${solution.description}</p></div><a class="solution-item-link" href="${solution.href}">Explore</a>`);
+function renderSolutionCard(solution, index) {
+  const imageUrl = 'Images/process-phase4.webp';
+  return createCard('article', 'solution-item', `<div class="solution-item-image"><img src="${imageUrl}" alt="${solution.title}" loading="lazy" decoding="async" /></div><div class="solution-item-copy"><h3>${solution.title}</h3><p>${solution.description}</p></div><a class="solution-item-link" href="${solution.href}">Explore <span aria-hidden="true">→</span></a>`);
 }
 
 function renderBenefitCard(benefit) {
@@ -72,7 +73,13 @@ function renderIndustryCard(industry) {
 }
 
 function renderIntegrationItem(integration) {
-  const content = `<strong>${integration.title}</strong><p>${integration.items.replace(/\n/g, '<br>')}</p>`;
+  const chips = integration.items
+    .split('\n')
+    .map(item => item.trim())
+    .filter(Boolean)
+    .map(item => `<span class="integration-chip">${item}</span>`)
+    .join('');
+  const content = `<strong>${integration.title}</strong><div class="integration-chips">${chips}</div>`;
   return createCard('div', 'integration-item', content);
 }
 
@@ -88,25 +95,56 @@ function initializeSite() {
 function initializeContactForm() {
   const contactForm = document.querySelector('.contact-form') || document.getElementById('form');
   const successMessage = document.getElementById('contact-success');
-  if (!contactForm) return;
+  if (!contactForm || !successMessage) return;
 
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const name = contactForm.querySelector('#name').value.trim();
-    const email = contactForm.querySelector('#email').value.trim();
-    const company = contactForm.querySelector('#company').value.trim();
-    const useCase = contactForm.querySelector('#useCase').value.trim();
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const name = (contactForm.querySelector('#name')?.value || '').trim();
+    const email = (contactForm.querySelector('#email')?.value || '').trim();
+    const company = (contactForm.querySelector('#company')?.value || '').trim();
+    const useCase = (contactForm.querySelector('#useCase')?.value || '').trim();
+    const budget = (contactForm.querySelector('#budget')?.value || '').trim();
+    const workflow = (contactForm.querySelector('#workflow')?.value || '').trim();
 
     if (!name || !email) {
       successMessage.textContent = 'Please provide at least your name and email.';
       return;
     }
 
-    const subject = encodeURIComponent('Tomorrow Workforce AI Opportunity');
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company}\nUse case: ${useCase}`);
-    window.location.href = `mailto:hello@tomorrowworkforce.com?subject=${subject}&body=${body}`;
-    successMessage.textContent = 'Opening your mail client with a pre-filled message...';
-    contactForm.reset();
+    const endpoint = contactForm.dataset.endpoint || 'http://localhost:3000/api/contact';
+
+    try {
+      if (submitButton) submitButton.disabled = true;
+      successMessage.textContent = 'Sending...';
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          useCase,
+          budget,
+          workflow,
+          sourcePage: window.location.pathname,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+      }
+
+      successMessage.textContent = 'Thanks. Your details were submitted successfully.';
+      contactForm.reset();
+    } catch (error) {
+      successMessage.textContent = 'Submission failed. Please try again in a moment.';
+      console.error(error);
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
   });
 }
 

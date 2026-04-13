@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How We Work | Tomorrow Workforce</title>
+  <title>How We Work | The Tomorrow Workforce</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="how-we-work">
   <header class="site-header">
     <div class="container header-inner">
-        <a class="brand" href="index.html"><span>Tomorrow</span> Workforce</a>
+        <a class="brand" href="index.html" aria-label="The Tomorrow Workforce home">
+          <img src="Images/ttw-logo.svg" alt="The Tomorrow Workforce" />
+        </a>
         <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -28,45 +30,80 @@
 
   <main>
     <section class="section section-hero">
-      <div class="container hero-grid">
+      <div class="container hero-grid howwork-hero">
         <div class="hero-copy">
-          <p class="eyebrow">How We Work</p>
-          <h1>Fast, focused delivery for production AI systems.</h1>
-          <p>We move quickly with a practical, operations-first approach to build systems that deliver measurable results.</p>
-        </div>
-        <div class="hero-visual">
-          <div class="visual-panel">Delivery process illustration</div>
+          <h1>How Custom<br>AI Systems Ship in Weeks</h1>
+          <p>We deliver a single high-ROI AI system first — then expand AI across your operations.</p>
+          <p>Typical first system: 4-8 weeks to production.</p>
         </div>
       </div>
     </section>
 
     <section class="section section-process">
       <div class="container">
-        <div class="section-header">
-          <h2>Our delivery process</h2>
-          <p>One high-ROI system at a time, built and scaled with real workflow integration.</p>
-        </div>
         <div class="process-grid">
-          <article class="process-step">
-            <span>1</span>
-            <h3>Discover</h3>
-            <p>Align on the highest-impact operational opportunity and define success metrics.</p>
+          <article class="process-step phase-card">
+            <div class="phase-content">
+              <p class="phase-meta" data-phase="01">01  Typical Timeline: 1-2 Weeks</p>
+              <h3>Phase 1: Identify the Highest-ROI AI Opportunity</h3>
+              <p>We analyze your workflows to identify the single highest-ROI opportunity for AI.</p>
+              <p class="phase-feature">Workflow analysis and ROI estimate</p>
+              <p class="phase-feature">Technical feasibility validation</p>
+            </div>
+            <div class="phase-image-wrapper">
+              <div class="process-phase-image"><img src="Images/process-phase4.webp" alt="Phase 1" loading="lazy" /></div>
+            </div>
           </article>
-          <article class="process-step">
-            <span>2</span>
-            <h3>Build</h3>
-            <p>Create the first production version quickly with AI-assisted design and development.</p>
+          <article class="process-step phase-card">
+            <div class="phase-content">
+              <p class="phase-meta" data-phase="02">02  Typical Timeline: 3-6 Weeks</p>
+              <h3>Phase 2: Rapid Build</h3>
+              <p>We build a production-ready AI system tailored to your operational workflows.</p>
+              <p class="phase-feature">Built for production deployment from the start.</p>
+              <p class="phase-feature">Custom AI architecture</p>
+              <p class="phase-feature">Iterative system reviews</p>
+              <p class="phase-feature">Production-ready integrations</p>
+            </div>
+            <div class="phase-image-wrapper">
+              <div class="process-phase-image"><img src="Images/process-phase4.webp" alt="Phase 2" loading="lazy" /></div>
+            </div>
           </article>
-          <article class="process-step">
-            <span>3</span>
-            <h3>Deploy</h3>
-            <p>Integrate the system into your existing workflows, tools, and security controls.</p>
+          <article class="process-step phase-card">
+            <div class="phase-content">
+              <p class="phase-meta" data-phase="03">03  Typical Timeline: 1-2 Weeks</p>
+              <h3>Phase 3: Deploy Into Your Operations</h3>
+              <p>We integrate the system into your existing tools and workflows, and train your team to use it.</p>
+              <p class="phase-feature">Live deployment into production workflows</p>
+              <p class="phase-feature">Team onboarding and documentation</p>
+            </div>
+            <div class="phase-image-wrapper">
+              <div class="process-phase-image"><img src="Images/process-phase3.webp" alt="Phase 3" loading="lazy" /></div>
+            </div>
           </article>
-          <article class="process-step">
-            <span>4</span>
-            <h3>Scale</h3>
-            <p>Expand the system to new teams, processes, and operational domains.</p>
+          <article class="process-step phase-card">
+            <div class="phase-content">
+              <p class="phase-meta" data-phase="04">04  Typical Timeline: Ongoing</p>
+              <h3>Phase 4: Expand Across Operations</h3>
+              <p>Once the first system is delivering value, we identify the next operational workflows to automate or augment.</p>
+              <p class="phase-feature">Strategic roadmap</p>
+              <p class="phase-feature">Continuous optimization</p>
+            </div>
+            <div class="phase-image-wrapper">
+              <div class="process-phase-image"><img src="Images/process-phase4.webp" alt="Phase 4" loading="lazy" /></div>
+            </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact">
+      <div class="container contact-panel contact-panel--center">
+        <div class="contact-copy">
+          <p class="contact-kicker">ENGAGEMENTS TYPICALLY DELIVER AN OPERATIONAL SYSTEM IN 4–8 WEEKS.</p>
+          <h2>Discuss Your AI Opportunity</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="contact.html">Book a Strategy Call</a>
         </div>
       </div>
     </section>
@@ -74,8 +111,20 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
-      <a href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
+      <div class="footer-brand">
+        <strong>The Tomorrow Workforce</strong>
+        <p>Custom AI Systems. Delivered in Weeks, Not Quarters.</p>
+        <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="how-we-work.html">How We Work</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="footer-email" href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
     </div>
   </footer>
   <script src="site.js" defer></script>

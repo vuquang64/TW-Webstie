@@ -1,0 +1,29 @@
+<svg width="800" height="260" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0" />
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="20" y="60" fill="#ffffff" font-size="20" font-weight="700" letter-spacing="4">THE</text>
+    <text x="20" y="130" fill="#ffffff" font-size="84" font-weight="900" letter-spacing="-2">TOMORROW</text>
+    <text x="20" y="205" fill="#ffffff" font-size="84" font-weight="900" letter-spacing="-2">WORKFORCE</text>
+    <text x="24" y="245" fill="#93c5fd" font-size="18" font-weight="600" letter-spacing="2">WHERE KNOWLEDGE &amp; INTELLIGENCE MEET</text>
+  </g>
+
+  <g transform="translate(520, 50)">
+    <path d="M0,0 L50,75 L0,150 L40,150 L90,75 L40,0 Z" fill="url(#grad1)"/>
+    <path d="M50,0 L100,75 L50,150 L90,150 L140,75 L90,0 Z" fill="url(#grad2)"/>
+    <path d="M100,0 L150,75 L100,150 L140,150 L190,75 L140,0 Z" fill="url(#grad3)"/>
+  </g>
+</svg>

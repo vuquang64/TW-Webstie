@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomorrow Workforce</title>
+  <title>The Tomorrow Workforce</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="home">
   <header class="site-header">
     <div class="container header-inner">
-        <a class="brand" href="index.html"><span>Tomorrow</span> Workforce</a>
+        <a class="brand" href="index.html" aria-label="The Tomorrow Workforce home">
+          <img src="Images/ttw-logo.svg" alt="The Tomorrow Workforce" />
+        </a>
         <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -22,6 +24,7 @@
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </nav>
+      <a class="btn btn-primary nav-cta" href="contact.html">Start a Project Discussion</a>
     </div>
   </header>
 
@@ -35,11 +38,11 @@
             <p>Production AI integrated directly into your workflows, designed to deliver operational impact quickly.</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="contact.html">Discuss Your AI Opportunity</a>
-              <a class="btn btn-secondary" href="how-we-work.html">See How We Work</a>
+              <a class="btn btn-secondary" href="how-we-work.html">See How We Work <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div class="hero-visual">
-            <img class="hero-image" src="home-hero.webp" alt="AI dashboard interface" />
+            <img class="hero-image" src="Images/home-hero.webp" alt="AI dashboard interface" />
           </div>
         </div>
       </div>
@@ -60,7 +63,7 @@
             <p class="problem-summary">We deliver custom systems with the speed and cost structure of software products.</p>
           </div>
           <div class="section-graphic">
-            <img class="problem-graphic" src="home-problem.svg" alt="Problem model graphic" />
+            <img class="problem-graphic" src="Images/home-problem.svg" alt="Problem model graphic" />
           </div>
         </div>
       </div>
@@ -69,19 +72,19 @@
     <section class="section section-engine">
       <div class="section-block section-block--light">
         <div class="container engine-grid">
+          <div class="engine-diagram">
+            <img class="engine-image" src="Images/home-model.svg" alt="AI model architecture" />
+          </div>
           <div class="engine-copy">
             <div class="section-header">
               <h2>An AI-Native Build Engine.</h2>
               <p>Our development workflow is AI-assisted end-to-end, allowing small teams to design, build, and ship production systems faster than traditional consulting delivery models.</p>
             </div>
             <ul class="engine-list">
-              <li><strong>Built for operations</strong> — Designed to fit the systems and workflows your team already uses.</li>
-              <li><strong>Production-ready</strong> — Focus on shipping working systems, not prototypes.</li>
-              <li><strong>Designed to scale</strong> — Architecture that expands across teams and functions.</li>
+              <li>Rapid architecture and iteration</li>
+              <li>Production-ready integrations</li>
+              <li>Built to scale beyond a single use case</li>
             </ul>
-          </div>
-          <div class="engine-diagram">
-            <img class="engine-image" src="home-model.svg" alt="AI model architecture" />
           </div>
         </div>
       </div>
@@ -127,6 +130,7 @@
         <div class="container">
           <div class="section-header">
             <h2>Experience Delivering AI Across Industries</h2>
+            <p>We build systems that support operational workflows across multiple sectors.</p>
           </div>
           <div class="industry-grid" id="industry-grid"></div>
         </div>
@@ -152,27 +156,52 @@
           <div class="section-header">
             <h2>Real Operational Impact</h2>
           </div>
-          <ul class="impact-list">
-            <li><strong>Operational Document Processing</strong> Manufacturing Client</li>
-            <li><strong>Internal AI Operations Assistant</strong> Financial Services Firm</li>
-            <li><strong>Workflow Automation System</strong> Logistics Company</li>
-          </ul>
-          <p class="section-note">MOST ENGAGEMENTS BEGIN WITH A FOCUSED OPERATIONAL SYSTEM.</p>
+          <div class="impact-card-grid">
+            <article class="impact-card">
+              <h3>Operational Document Processing</h3>
+              <p class="impact-client">Manufacturing Client</p>
+              <ul>
+                <li>120k documents processed monthly</li>
+                <li>87% automated classification</li>
+                <li>Integrated with SAP workflow</li>
+                <li>Production deployment in 6 weeks</li>
+              </ul>
+            </article>
+            <article class="impact-card">
+              <h3>Internal AI Operations Assistant</h3>
+              <p class="impact-client">Financial Services Firm</p>
+              <ul>
+                <li>AI assistant for internal research and reporting</li>
+                <li>Reduced reporting prep from 3 days to 2 hours</li>
+                <li>Secure internal knowledge retrieval</li>
+              </ul>
+            </article>
+            <article class="impact-card">
+              <h3>Workflow Automation System</h3>
+              <p class="impact-client">Logistics Company</p>
+              <ul>
+                <li>Automated multi-step operational workflows</li>
+                <li>Reduced manual processing time by 60%</li>
+                <li>Deployed across operations teams</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section-contact" id="contact">
       <div class="section-block section-block--dark">
-        <div class="container contact-panel">
+        <div class="container contact-panel contact-panel--center">
           <div class="contact-copy">
+            <p class="contact-kicker">MOST ENGAGEMENTS BEGIN WITH A FOCUSED OPERATIONAL SYSTEM.</p>
             <h2>Identify Your Highest-ROI AI Opportunity</h2>
-            <p>Typical first systems deployed within 4–8 weeks.</p>
           </div>
           <div class="contact-actions">
             <a class="btn btn-primary" href="contact.html">Discuss Your AI Opportunity</a>
-            <a class="btn btn-secondary" href="contact.html#form">Share Your Use Case</a>
+            <a class="btn btn-secondary" href="contact.html#form">Share Your Use Case <span aria-hidden="true">→</span></a>
           </div>
+          <p class="contact-timing">Typical first systems deployed within 4&ndash;8 weeks.</p>
         </div>
       </div>
     </section>
@@ -180,8 +209,20 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
-      <a href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
+      <div class="footer-brand">
+        <strong>The Tomorrow Workforce</strong>
+        <p>Custom AI Systems. Delivered in Weeks, Not Quarters.</p>
+        <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="how-we-work.html">How We Work</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="footer-email" href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
     </div>
   </footer>
   <script src="site.js" defer></script>

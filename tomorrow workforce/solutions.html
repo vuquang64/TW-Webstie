@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solutions | Tomorrow Workforce</title>
+  <title>Solutions | The Tomorrow Workforce</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="solutions">
   <header class="site-header">
     <div class="container header-inner">
-        <a class="brand" href="index.html"><span>Tomorrow</span> Workforce</a>
+        <a class="brand" href="index.html" aria-label="The Tomorrow Workforce home">
+          <img src="Images/ttw-logo.svg" alt="The Tomorrow Workforce" />
+        </a>
         <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -30,39 +32,98 @@
     <section class="section section-hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Solutions</p>
-          <h1>AI systems designed for real operational workflows.</h1>
-          <p>Deliver focused solutions that improve document processing, internal operations, decision-making, and workflow orchestration.</p>
-        </div>
-        <div class="hero-visual">
-          <div class="visual-panel">Solution overview illustration</div>
+          <h1>Solutions</h1>
+          <p>Production-grade AI systems tailored to your operational reality.</p>
         </div>
       </div>
     </section>
 
     <section class="section section-solutions">
       <div class="container">
-        <div class="solution-grid">
-          <article class="solution-card">
-            <h3>Intelligent Document Automation</h3>
-            <p>Extract, classify, and route unstructured documents automatically to accelerate approvals and reduce manual handoffs.</p>
-            <a href="contact.html">Explore</a>
+        <div class="solution-showcase-grid">
+          <article class="solution-showcase-card" id="document-automation">
+            <div class="solution-showcase-image">
+              <img src="Images/process-phase4.webp" alt="Intelligent Document Automation" loading="lazy" />
+            </div>
+            <div class="solution-showcase-copy">
+              <h3>Intelligent Document Automation</h3>
+              <p>Transform unstructured documents into structured, actionable data. We build pipelines that automatically extract, classify, and route information from invoices, contracts, and forms with high accuracy.</p>
+              <ul>
+              <li>Automated extraction from invoices, contracts, and forms</li>
+              <li>High-accuracy classification and routing</li>
+              <li>Integration with existing ERPs and databases</li>
+              </ul>
+            </div>
           </article>
-          <article class="solution-card">
-            <h3>Internal AI Operations Assistants</h3>
-            <p>Secure, context-aware assistants that support operations teams with fast access to relevant knowledge.</p>
-            <a href="contact.html">Explore</a>
+          <article class="solution-showcase-card" id="ai-assistants">
+            <div class="solution-showcase-image">
+              <img src="Images/process-phase4.webp" alt="Internal AI Assistants" loading="lazy" />
+            </div>
+            <div class="solution-showcase-copy">
+              <h3>Internal AI Assistants</h3>
+              <p>Empower your team with secure, context-aware agents. Our assistants retrieve knowledge from internal wikis and docs, draft responses, and summarize complex information while respecting role-based access controls.</p>
+              <ul>
+              <li>Secure knowledge retrieval from internal wikis and docs</li>
+              <li>Context-aware drafting and summarization</li>
+              <li>Role-based access controls and audit logging</li>
+              </ul>
+            </div>
           </article>
-          <article class="solution-card">
-            <h3>AI Decision Support Tools</h3>
-            <p>Use predictive analytics and operational models to drive smarter, faster decisions across complex workflows.</p>
-            <a href="contact.html">Explore</a>
+          <article class="solution-showcase-card" id="decision-support">
+            <div class="solution-showcase-image">
+              <img src="Images/process-phase4.webp" alt="AI Decision Support Tools" loading="lazy" />
+            </div>
+            <div class="solution-showcase-copy">
+              <h3>AI Decision Support Tools</h3>
+              <p>Make smarter operational choices with predictive models and analytics. We synthesize real-time data into custom dashboards that provide actionable insights and predictive alerts.</p>
+              <ul>
+              <li>Real-time data synthesis for operational leaders</li>
+              <li>Predictive analytics for resource allocation</li>
+              <li>Custom dashboards with actionable insights</li>
+              </ul>
+            </div>
           </article>
-          <article class="solution-card">
-            <h3>Workflow Orchestration Systems</h3>
-            <p>Automate multi-step processes across your staff, systems, and partner ecosystems with robust integration and control.</p>
-            <a href="contact.html">Explore</a>
+          <article class="solution-showcase-card" id="workflow-orchestration">
+            <div class="solution-showcase-image">
+              <img src="Images/process-phase4.webp" alt="Workflow Orchestration Systems" loading="lazy" />
+            </div>
+            <div class="solution-showcase-copy">
+              <h3>Workflow Orchestration Systems</h3>
+              <p>Automate complex, multi-step processes across your existing toolchain. Our orchestration systems manage multi-agent task execution, automated triage, and seamless API integrations.</p>
+              <ul>
+              <li>Multi-agent task execution across platforms</li>
+              <li>Automated triage and exception handling</li>
+              <li>Seamless API integrations with legacy systems</li>
+              </ul>
+            </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-benefits">
+      <div class="container">
+        <div class="section-header">
+          <h2>Technical Capabilities</h2>
+        </div>
+        <div class="benefit-grid">
+          <div class="benefit-card"><h3>Agentic Orchestration</h3></div>
+          <div class="benefit-card"><h3>LLM Evaluations</h3></div>
+          <div class="benefit-card"><h3>Enterprise Integrations</h3></div>
+          <div class="benefit-card"><h3>Security Basics</h3></div>
+          <div class="benefit-card"><h3>RAG Architectures</h3></div>
+          <div class="benefit-card"><h3>Custom Fine-Tuning</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact">
+      <div class="container contact-panel">
+        <div class="contact-copy">
+          <h2>Discuss Your Use Case</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="contact.html">Start a Project Discussion</a>
         </div>
       </div>
     </section>
@@ -70,8 +131,20 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
-      <a href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
+      <div class="footer-brand">
+        <strong>The Tomorrow Workforce</strong>
+        <p>Custom AI Systems. Delivered in Weeks, Not Quarters.</p>
+        <p>Singapore-based AI systems integrator delivering production AI for enterprise operations.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="how-we-work.html">How We Work</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="footer-email" href="mailto:hello@tomorrowworkforce.com">hello@tomorrowworkforce.com</a>
     </div>
   </footer>
   <script src="site.js" defer></script>
