@@ -113,7 +113,7 @@ function initializeContactForm() {
       return;
     }
 
-    const endpoint = contactForm.dataset.endpoint || 'http://localhost:3000/api/contact';
+    const endpoint = contactForm.dataset.endpoint || '/api/contact';
 
     try {
       if (submitButton) submitButton.disabled = true;
